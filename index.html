@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brithday my love </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <p>My Love</p>
+                <h1>Happy Birthday To <span>My Love</span> <br> I Love you so much</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/love3.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Happy Brithday to Meyinh Heng</h1>
+                    <p>nis jea word del b yy dak o eng pel brithday o eng lerk ti 1, jea word del b jam jeang ke, ng jea pel del b brab o eng tha b sl o eng. hz sl o eng krob pel min tha pel k doy I love you so much </p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('tab2022')">2022</p>
+                        <p class="tab-links" onclick="openTab('tab2023')">2023</p>
+                        <p class="tab-links" onclick="openTab('tab2024')">2024</p>
+                    </div>
+
+                    
+                    <div class="tab-contents active-tab" id="tab2022">
+                        <img src="images/1.png" alt="Memory from 2022 - 1" class="memory-image">
+                        <img src="images/2.png" alt="Memory from 2022 - 2" class="memory-image">
+                        <img src="images/3.png" alt="Memory from 2022 - 3" class="memory-image">
+                    </div>
+                    
+                    <div class="tab-contents" id="tab2023">
+                        <img src="images/4.png" alt="Memory from 2023 - 1" class="memory-image">
+                        <img src="images/5.png" alt="Memory from 2023 - 2" class="memory-image">
+                        <img src="images/6.png" alt="Memory from 2023 - 3" class="memory-image">
+                    </div>
+                    
+                    <div class="tab-contents" id="tab2024">
+                        <img src="images/7.png" alt="Memory from 2024 - 1" class="memory-image">
+                        <img src="images/8.png" alt="Memory from 2024 - 2" class="memory-image">
+                        <img src="images/9.png" alt="Memory from 2024 - 3" class="memory-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">MY LOVE IS THE BEST. Happy birthday to my love</h1>
+            <div class="services-list">
+                <div class="video-container">
+                    <!-- Option 1: HTML5 Video (for your own video file) -->
+                    <video controls>
+                        <source src="images/My Love.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <h3 class="video-title">Happy birthday to you babe. i glad to celebrate your 7th birthday as a friend and 3th birthday as your boyfriend. i love to see you grow up everyday. since the first day until today i love you more and more. you are the reason for my smile and my tear of joy. im sorry for all my words and action to make you feel bad and disappointed with me. b dg tha ral ngai o tdol oakas oy b jrern and b ttul vea ban and im not promise but for day by day i would make myself to become more mature for you. . may this world would be kind to you o. love you so much my present and my future</h3>
+            </div>
+        </div>
+    </div>
+
+  
+        
+    <script>
+        function openTab(tabId) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName("tab-contents");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active-tab");
+            }
+            
+            // Remove active-link class from all tab links
+            var tabLinks = document.getElementsByClassName("tab-links");
+            for (var i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active-link");
+            }
+            
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add("active-tab");
+            
+            // Add active-link class to the clicked tab link
+            event.currentTarget.classList.add("active-link");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #ffefef, #ffe0e5);
+    color: #333;
+    line-height: 1.6;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/Love2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    padding: 10px 10%;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-text {
+    margin-top: 15%;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.header-text p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-text h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.header-text h1 span {
+    color: #ff78a7;
+    font-family: 'Dancing Script', cursive;
+}
+
+#about {
+    padding: 80px 0;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.about-col-1 img:hover {
+    transform: scale(1.02);
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #ff4d79;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 20px;
+}
+
+.about-col-2 p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 30px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #555;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.tab-links:hover {
+    color: #ff4d79;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff4d79;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link {
+    color: #ff4d79;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.memory-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.memory-image:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Services section */
+#services {
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #ffefef, #ffe0e5);
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+.video-title {
+    color: #555;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller laptops */
+@media only screen and (max-width: 991px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .header-text {
+        margin-top: 20%;
+    }
+    
+    .header-text h1 {
+        font-size: 40px;
+    }
+    
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    
+    .about-col-1 img {
+        max-width: 350px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .tab-links {
+        margin-right: 30px;
+    }
+}
+
+/* iPhone 15 Pro Max and similar large phones */
+@media only screen and (max-width: 428px) {
+    .container {
+        padding: 10px 5%;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .header-text {
+        margin-top: 40%;
+        text-align: center;
+    }
+    
+    .header-text p {
+        font-size: 1.8rem;
+    }
+    
+    .header-text h1 {
+        font-size: 24px;
+    }
+    
+    .about-col-1 img {
+        max-width: 100%;
+    }
+    
+    .sub-title {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .tab-titles {
+        justify-content: center;
+    }
+    
+    .tab-links {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+    
+    .memory-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .video-title {
+        font-size: 16px;
+    }
+}
+
+/* Small phones */
+@media only screen and (max-width: 375px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .header-text {
+        margin-top: 45%;
+    }
+    
+    .header-text p {
+        font-size: 1.5rem;
+    }
+    
+    .header-text h1 {
+        font-size: 22px;
+    }
+    
+    .tab-links {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+    
+    .memory-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Fix for iPhone 15 Pro Max and similar phones in landscape orientation */
+@media only screen and (max-width: 926px) and (orientation: landscape) {
+    .header-text {
+        margin-top: 5%;
+    }
+    
+    .header-text h1 {
+        font-size: 30px;
+    }
+    
+    #about {
+        padding: 40px 0;
+    }
+    
+    .tab-contents.active-tab {
+        gap: 10px;
+    }
+    
+    .memory-image {
+        width: 150px;
+        height: 150px;
+    }
+}
